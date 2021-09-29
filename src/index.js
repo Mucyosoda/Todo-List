@@ -1,5 +1,4 @@
-// eslint-disable-no-unused-vars
-import _ from 'lodash';
+import _ from 'lodash'; // eslint-disable-no-unused-vars
 import './style.css';
 
 const listTable = [
@@ -22,8 +21,6 @@ const listTable = [
 
 const todoList = document.querySelector('.todo-list');
 // eslint-disable-no-use-before-define
-document.addEventListener('DOMContentLoaded', displayTodo);
-
 function displayTodo(item) {
   return ` <div class='todo'>
   <div class="checkbox"><input type="checkbox"></div>
@@ -31,5 +28,7 @@ function displayTodo(item) {
   <div><i class="fas fa-ellipsis-v"></i></div>
   </div>`;
 }
+
+document.addEventListener('DOMContentLoaded', displayTodo);
 
 todoList.innerHTML = `${listTable.map(displayTodo).join('')}`;
