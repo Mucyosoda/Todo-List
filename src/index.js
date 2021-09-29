@@ -6,18 +6,19 @@ const listTable = [
   {
     description: 'go to the market',
     completed: true,
-    index: 1,
+    index: 0,
   },
   {
     description: 'wash dishes',
     completed: true,
-    index: 2,
+    index: 1,
   },
   {
     description: 'play guitar',
     completed: true,
-    index: 3,
+    index: 2,
   },
+  'rwanda',
 ];
 
 const todoList = document.querySelector('.todo-list');
@@ -31,5 +32,4 @@ function displayTodo(item) {
 }
 
 document.addEventListener('DOMContentLoaded', displayTodo);
-
 todoList.innerHTML = `${listTable.map(displayTodo).join('')}`;

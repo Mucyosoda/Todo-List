@@ -5,19 +5,22 @@
 }
 
 body {
-  background-image: linear-gradient(120deg, #434343, #fff);
+  background-color: rgba(128, 128, 128, 0.233);
   font-family: 'poppins', sans-serif;
-  margin-left: 50px;
-  margin-top: 50px;
+  margin: 50px;
 }
 
 header {
   font-size: 1rem;
-  width: 50%;
+  width: 100%;
   background-color: #fff;
   padding: 10px;
   display: flex;
   justify-content: space-between;
+}
+
+main {
+  background-color: #fff;
 }
 
 form {
@@ -25,7 +28,6 @@ form {
   align-items: center;
   text-align: center;
   min-height: 9vh;
-  width: 50%;
   justify-content: center;
 }
 
@@ -37,20 +39,26 @@ form button {
   background-color: white;
 }
 
-form input {
-  min-width: 95%;
+.todo-input {
+  width: 96%;
+  height: 50px;
+  margin: 0;
+  border: none;
+}
+
+.todo-button {
+  height: 50px;
+  width: 2%;
+  margin: 0;
+  border: none;
+  background-color: #fff;
+  color: darkgrey;
 }
 
 input::placeholder {
   color: #4343432d;
   font-size: 1.3rem;
   font-style: italic;
-}
-
-form button {
-  color: #4343432d;
-  background-color: white;
-  transition: all 0.3s ease;
 }
 
 div i {
@@ -66,17 +74,12 @@ form button i {
   transform: rotate(90deg);
 }
 
-form button:hover {
-  background-color: tomato;
-  color: white;
-}
-
 .todo-container {
   display: flex;
 }
 
 .todo-list {
-  min-width: 50%;
+  min-width: 99%;
   list-style: none;
 }
 
@@ -102,12 +105,11 @@ form button:hover {
 }
 
 .description {
-  width: 80%;
+  width: 90%;
   margin-right: 50px;
 }
 
 .footer {
-  width: 50%;
   background-color: rgb(206, 202, 202);
   text-align: center;
   min-height: 10vh;
@@ -124,4 +126,8 @@ form button:hover {
 
 .footer a:hover {
   text-decoration: underline;
+}
+
+.completed-todo {
+  text-decoration: line-through;
 }
