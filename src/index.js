@@ -1,11 +1,7 @@
-// import _ from 'lodash';
-
 import './style.css';
 import activeCheckbox from './check.js';
 
 window.onload = function () {
-  // const addTodos = document.querySelector('.todo-button');
-  // const textTodo = document.querySelector('.todo-input');
   const todoList = document.querySelector('.todo-list');
 
   const listTable = [

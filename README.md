@@ -22,8 +22,7 @@ Additional description about the project and its features.
 
 ## Getting Started
 
-**This is an example of how you may give instructions on setting up your project locally.**
-**Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the currect project doesn't require testing.**
+**Download code from my repositor and run local in your computer.**
 
 To get a local copy up and running follow these simple example steps.
 
@@ -31,9 +30,15 @@ To get a local copy up and running follow these simple example steps.
 
 ### Setup
 
+open my GitHub download code
+
 ### Install
 
+install any code editor (vs code or atom)
+
 ### Usage
+
+any platform
 
 ### Run tests
 
@@ -41,27 +46,27 @@ To get a local copy up and running follow these simple example steps.
 
 ## Authors
 
-👤 **Author1**
+👤 \*_Mucyo_
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- GitHub: [@githubhandle](https://github.com/Mucyosoda)
+- Twitter: [@twitterhandle](https://twitter.com/home)
+- LinkedIn: [LinkedIn](linkedin.com/in/claude-mucyo-b95405106)
 
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](../../issues/).
+Feel free to check the [issues page](https://github.com/Mucyosoda/Todo-List/issues).
 
 ## Show your support
 
+Contributions, issues, and feature requests are welcome!
 Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-- Hat tip to anyone whose code was used
-- Inspiration
-- etc
+- Microverse
+- MY God
 
 ## 📝 License
 

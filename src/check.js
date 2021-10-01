@@ -1,18 +1,16 @@
-/* eslint no-use-before-define: ["error", { "variables": false }] */
-
-function updateCompletedListArray() {
+updateCompletedListArray = () => {
   completedTasks = [];
 
   taskList.forEach((task) => {
     if (task.done) completedTasks.push(`${taskList.indexOf(task)}`);
   });
-}
+};
 
-function saveLocalList() {
+saveLocalList = () => {
   localStorage.setItem('taskList', JSON.stringify(taskList));
-}
+};
 
-function toggleChecked(e) {
+toggleChecked = (e) => {
   const checkStatus = e.target.checked;
   const task = e.target.parentElement;
   const taskId = task.id;
@@ -37,9 +35,9 @@ function toggleChecked(e) {
   }
 
   saveLocalList();
-}
+};
 
-function updateListView() {
+updateListView = () => {
   const ul = document.getElementById('taskList');
 
   ul.innerHTML = '';
@@ -77,7 +75,7 @@ function updateListView() {
     listItem.appendChild(delBtn);
     ul.appendChild(listItem);
   });
-}
+};
 
 function checkDuplicate(task) {
   let matchFound = false;

@@ -46,15 +46,6 @@ li.task:hover {
   background-color: rgba(100, 100, 100, 0.158);
 }
 
-/* li.task:hover .deleteTaskBtn {
-  visibility: visible;
-  opacity: 1;
-} */
-
-/* li.task:hover .dotbtn {
-  display: none;
-} */
-
 input.taskCheckbox {
   position: relative;
   float: left;
