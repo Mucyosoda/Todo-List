@@ -1,4 +1,7 @@
-updateCompletedListArray = () => {
+let taskList = [];
+let completedTasks = [];
+
+const updateCompletedListArray = () => {
   completedTasks = [];
 
   taskList.forEach((task) => {
@@ -6,11 +9,11 @@ updateCompletedListArray = () => {
   });
 };
 
-saveLocalList = () => {
+const saveLocalList = () => {
   localStorage.setItem('taskList', JSON.stringify(taskList));
 };
 
-toggleChecked = (e) => {
+const toggleChecked = (e) => {
   const checkStatus = e.target.checked;
   const task = e.target.parentElement;
   const taskId = task.id;
@@ -37,7 +40,7 @@ toggleChecked = (e) => {
   saveLocalList();
 };
 
-updateListView = () => {
+const updateListView = () => {
   const ul = document.getElementById('taskList');
 
   ul.innerHTML = '';
@@ -109,9 +112,6 @@ document.querySelector('#taskInput').addEventListener('keypress', function (e) {
     addToList(this.value.trim());
   }
 });
-
-let taskList = [];
-let completedTasks = [];
 
 if (JSON.parse(localStorage.getItem('taskList'))) {
   taskList = JSON.parse(localStorage.getItem('taskList'));
