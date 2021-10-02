@@ -6,107 +6,209 @@
 
 body {
   background-color: rgba(128, 128, 128, 0.233);
-  font-family: 'poppins', sans-serif;
-  margin: 50px;
+  font-family: 'Poppins', sans-serif;
+  margin-top: 50px;
 }
 
-header {
-  font-size: 1rem;
-  width: 100%;
+.input-line {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-right: 35px;
+}
+
+.in {
+  width: 90%;
+}
+
+.fa-level-down-alt {
+  color: rgba(0, 0, 0, 0.185);
+  transform: rotate(90deg);
+}
+
+ul#taskList {
+  padding: 0 25px;
+}
+
+li.task {
+  list-style-type: none;
+  font-size: 1.5em;
+  height: 3rem;
+  padding: 7px 0 0 10px;
+  transition: all 0.1s ease-in-out;
+  -webkit-transition: all 0.1s ease-in-out;
+  -moz-transition: all 0.1s ease-in-out;
+  background-color: rgba(247, 241, 241);
+  margin: 0.2rem;
+}
+
+li.task:hover {
+  background-color: rgba(100, 100, 100, 0.158);
+}
+
+input.taskCheckbox {
+  position: relative;
+  float: left;
+  margin: 10px;
+  -webkit-appearance: none;
+  width: 15px;
+  height: 15px;
+  border: 1px solid rgba(0, 0, 0, 0.384);
+  border-radius: 5px;
+  outline: none;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.1s ease-in-out;
+  -webkit-transition: all 0.1s ease-in-out;
+  -moz-transition: all 0.1s ease-in-out;
+}
+
+input.taskCheckbox:checked {
   background-color: #fff;
-  padding: 10px;
+}
+
+input.taskCheckbox:checked::after {
+  color: black;
+  content: '\2713';
+  display: block;
+  font-size: 12px;
+  height: 12px;
+  position: absolute;
+  width: 12px;
+  left: 0.5px;
+  bottom: 2px;
+}
+
+input.taskCheckbox + label.taskLabel {
+  color: black;
+}
+
+input.taskCheckbox:checked + label.taskLabel {
+  font-style: italic;
+  text-decoration: line-through;
+  color: grey;
+}
+
+input[placeholder] {
+  font-size: 1.3em;
+  font-style: italic;
+  font-family: 'Poppins', sans-serif;
+  color: black;
+}
+
+#container {
+  width: 90%;
+  height: 500px;
+  position: relative;
+  margin: 0 auto;
+  background-color: #fff;
+  border-radius: 5px;
+  padding-top: 30px;
+}
+
+#header {
+  color: rgba(0, 0, 0, 0.589);
+  padding: 5px;
+  padding-right: 50px;
+  font-family: 'poppins', sans-serif;
+  font-size: 0.7rem;
+  margin-left: 30px;
   display: flex;
   justify-content: space-between;
 }
 
-main {
-  background-color: #fff;
+#inputContainer {
+  padding: 15px;
+  margin-left: 20px;
 }
 
-form {
-  display: flex;
-  align-items: center;
-  text-align: center;
-  min-height: 9vh;
-  justify-content: center;
-}
-
-form input,
-form button {
-  padding: 0.5rem;
-  font-size: 2rem;
-  border: none;
-  background-color: white;
-}
-
-.todo-input {
-  width: 96%;
-  height: 50px;
-  margin: 0;
-  border: none;
-}
-
-.todo-button {
-  height: 50px;
-  width: 2%;
-  margin: 0;
-  border: none;
-  background-color: #fff;
-  color: darkgrey;
-}
-
-input::placeholder {
-  color: #4343432d;
-  font-size: 1.3rem;
-  font-style: italic;
-}
-
-div i {
-  color: rgba(73, 73, 73, 0.404);
-  cursor: crosshair;
-}
-
-form button i {
-  font-size: 1rem;
-}
-
-.fa-level-down-alt {
-  transform: rotate(90deg);
-}
-
-.todo-container {
-  display: flex;
-}
-
-.todo-list {
-  min-width: 99%;
-  list-style: none;
-}
-
-.todo {
-  margin: 0.2rem;
-  background-color: rgb(247, 241, 241);
-  color: black;
-  font-size: 1.5rem;
-  display: flex;
-  align-items: center;
-  width: 100%;
-}
-
-.checkbox {
-  margin: 10px;
-  width: 2rem;
-  align-items: center;
-  text-align: center;
-}
-
-.checkbox input {
-  cursor: pointer;
-}
-
-.description {
+#inputContainer #taskInput {
   width: 90%;
-  margin-right: 50px;
+  border: none;
+  box-sizing: border-box;
+}
+
+#listWrapper {
+  position: absolute;
+  bottom: 50px;
+  top: 160px;
+  right: 0;
+  left: 0;
+}
+
+#deleteBtnWrapper {
+  width: 100%;
+  box-sizing: border-box;
+  position: absolute;
+  bottom: 15px;
+  padding: 0 15px;
+}
+
+#deleteBtnWrapper #deleteCompletedBtn {
+  float: left;
+  -webkit-appearance: none;
+  opacity: 0.5;
+  color: #000;
+  background-color: rgba(0, 0, 0, 0);
+  border-radius: 3px;
+  border: 1px solid black;
+  width: 150px;
+  height: 25px;
+  font-size: 14px;
+  outline: none;
+  transition: all 0.1s ease-in-out;
+  -webkit-transition: all 0.1s ease-in-out;
+  -moz-transition: all 0.1s ease-in-out;
+}
+
+#deleteBtnWrapper #deleteCompletedBtn:hover {
+  cursor: pointer;
+  opacity: 1;
+}
+
+#deleteBtnWrapper #clearTasksBtn {
+  float: right;
+  -webkit-appearance: none;
+  opacity: 0.5;
+  color: black;
+  background-color: rgba(0, 0, 0, 0);
+  border-radius: 3px;
+  border: 1px solid black;
+  width: 150px;
+  height: 25px;
+  font-size: 14px;
+  outline: none;
+  transition: all 0.1s ease-in-out;
+  -webkit-transition: all 0.1s ease-in-out;
+  -moz-transition: all 0.1s ease-in-out;
+}
+
+#deleteBtnWrapper #clearTasksBtn:hover {
+  cursor: pointer;
+  opacity: 1;
+}
+
+.dotbtn {
+  float: right;
+  padding-right: 10px;
+  cursor: crosshair;
+  color: rgba(0, 0, 0, 0.322);
+}
+
+.deleteTaskBtn {
+  float: right;
+  color: rgba(0, 0, 0, 0.322);
+  font-size: 16px;
+  font-weight: bold;
+  padding: 10px 5px;
+  visibility: hidden;
+  opacity: 0;
+  line-height: 0;
+  margin-right: 5px;
+  cursor: default;
+  transition: all 0.1s ease-in-out;
+  -webkit-transition: all 0.1s ease-in-out;
+  -moz-transition: all 0.1s ease-in-out;
 }
 
 .footer {
@@ -117,6 +219,7 @@ form button i {
   display: flex;
   justify-content: center;
   font-size: 24px;
+  width: 95%;
 }
 
 .footer a {
@@ -126,8 +229,4 @@ form button i {
 
 .footer a:hover {
   text-decoration: underline;
-}
-
-.completed-todo {
-  text-decoration: line-through;
 }

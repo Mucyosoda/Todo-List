@@ -18,26 +18,34 @@
     />
     <title>Todo List</title>
   </head>
+
   <body>
-    <main>
-      <header>
-        <div class="headers">Today's To Do</div>
-        <div><a href="#"></a><i class="fas fa-sync"></i></div>
-      </header>
-      <form>
-        <input
-          type="text"
-          class="todo-input"
-          placeholder="Add to your list..."
-        />
-        <button class="todo-button" type="submit">
-          <i class="fas fa-level-down-alt"> </i>
-        </button>
-      </form>
-      <div class="todo-container">
-        <ul class="todo-list"></ul>
+    <div id="container">
+      <div id="header">
+        <h1>Todo List</h1>
+        <div><i class="fas fa-sync"></i></div>
       </div>
-      <div class="footer"><a href="#"> Clear all completed</a></div>
-    </main>
+      <div id="inputContainer">
+        <div class="input-line">
+          <div class="in">
+            <input
+              id="taskInput"
+              type="text"
+              placeholder="Add to your list ....."
+              maxlength="50"
+            />
+          </div>
+
+          <div><a href="#"></a><i class="fas fa-level-down-alt"></i></div>
+        </div>
+        <div id="listWrapper">
+          <ul id="taskList"></ul>
+        </div>
+
+        <div id="deleteBtnWrapper">
+          <div class="footer"><a href="#"> Clear all completed</a></div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
