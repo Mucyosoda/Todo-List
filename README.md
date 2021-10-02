@@ -2,7 +2,7 @@
 
 # Todo list
 
-> display todo list from array
+> this project is to display todo list from localstorage
 
 ![screenshot](./app_screenshot.png)
 
@@ -28,25 +28,23 @@ To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
 
+install git, node, any code editor in your local machine
+
 ### Setup
 
-open my GitHub download code
+clone the repo or download from https://github.com/Mucyosoda/Todo-List.git
 
 ### Install
 
-install any code editor (vs code or atom)
+install all dependencies with npm install
 
 ### Usage
 
-any platform
-
-### Run tests
-
-### Deployment
+open index.html in your local browser
 
 ## Authors
 
-👤 \*_Mucyo_
+👤**Mucyo**
 
 - GitHub: [@githubhandle](https://github.com/Mucyosoda)
 - Twitter: [@twitterhandle](https://twitter.com/home)

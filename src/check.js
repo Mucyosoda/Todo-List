@@ -80,7 +80,7 @@ const updateListView = () => {
   });
 };
 
-function checkDuplicate(task) {
+const checkDuplicate = (task) => {
   let matchFound = false;
 
   taskList.forEach((t) => {
@@ -88,9 +88,9 @@ function checkDuplicate(task) {
   });
 
   return matchFound;
-}
+};
 
-function addToList(task) {
+const addToList = (task) => {
   if (checkDuplicate(task)) {
     return;
   }
@@ -104,7 +104,7 @@ function addToList(task) {
 
   localStorage.setItem('taskList', JSON.stringify(taskList));
   document.querySelector('#taskInput').value = '';
-}
+};
 
 document.querySelector('#taskInput').addEventListener('keypress', function (e) {
   const key = e.which || e.keyCode;
